@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Poppins:wght@200;400&display=swap');
+
+:root {
+    font-size: 16px;
+    --white: #fff;
+    --gray: #EAEFF2;
+    --input-border: #e5e7eb;
+    --error: #b91c1c;
+    --btn: #596D48;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* input:invalid:not(:focus) for only showing error while not focusing*/
+input:invalid:not(:focus) {
+    border-color: var(--error);
+}
+
+.error {
+    color: var(--error);
+    font-size: 0.8rem;
+}
+
+.error-border {
+    color: var(--error);
+    border: 1px solid var(--error);
+}
+
+/* to implement border-success & border-error */
+
+input {
+    border: 1px solid var(--input-border);
+} 
+input:focus {
+    outline: none;
+    border: 1px solid blue;
+}
+
+/* Styling */   
+    /* Display */
+.content {
+    display: flex;
+    height: 100vh;
+}
+
+    /* Brand section */
+.brand {
+    background-image: url(assets/halie-west-25xggax4bSA-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+    /* Logo */
+.logo {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    font-family: 'Indie Flower', cursive;
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    position: absolute;
+    top: 20vh;
+}
+
+    /* logo image sizing */
+#logo-img {
+    width: 60px;
+    height: 80px;
+}
+
+.logo > h1 {
+    font-size: 2.5rem;
+    color: var(--white);
+}
+
+    /* Credit to Background-image owner */
+.brand > p {
+    position: absolute;
+    bottom: 10px;
+    color: var(--white);
+    padding: 0 10px;
+} .brand > p > a {
+    color: var(--white);
+}
+
+    /* Main section */
+.main {
+    display: grid;
+    grid-template-rows: 35% 30% 35%;
+    width: 70%;
+} 
+
+.dummytext {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 30px 20px;
+    background-color: rgb(250, 250, 250);
+    font-weight: bold;
+}
+
+/* Sign-in option for those with accounts */
+.main > p > a {
+    color: var(--btn);
+    text-decoration: none;
+}
+
+.main > p {
+    padding-top: 80px;
+}
+/* --- */
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    gap: 20px;
+    /* for button replacement */
+    position: relative;
+}
+
+.input-form {
+    width: 100%;
+}
+
+.input-form > h2 {
+    font-family: 'Indie Flower',cursive;
+    padding-left: 20px;
+}
+
+/* Mimicking Box-shadow for Form */
+.input-form + div {
+    height: 0.1px;
+    background-color: white;
+    box-shadow: 0px 2px 2px 1px rgba(114, 114, 114, 0.355);
+}
+
+.inputs {
+    display: grid;
+    grid-template-columns: 30% 60%;
+    column-gap: 20px;
+    padding-left: 20px;
+}
+
+
+label {
+    display: block;
+    font-size: 11px;
+}
+
+input {
+    position: relative;
+    font-size: 12px;
+    font-family: inherit;
+    width: 200px;
+    min-width: 100px;
+    border-radius: 5px;
+    padding: 2px 5px;
+}
+
+.btn {
+    position: absolute;
+    top: 220px;
+    margin-left: 20px;
+    padding: 10px 5px;
+    color: var(--white);
+    width: 160px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--btn);
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+#pwd-error {
+    position: absolute;
+    font-size: 11px;
+}
+
+.login-text {
+    padding-left: 20px;
+    background-color: rgb(250, 250, 250);
+}

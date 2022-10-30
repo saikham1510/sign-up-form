@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="content">
+        <!-- Image part -->
+        <section class="brand">
+            <!-- Odin Logo -->
+            <div class="logo">
+                <img src="assets/odin-lined.png" alt="Odin Logo" id="logo-img">
+                <h1>ODIN</h1>
+            </div>
+            <!-- Photo credit -->
+            <p>
+                Photo by
+                <a href="#">
+                    Halie West
+                </a>
+                on
+                <a href="#">
+                    Unsplash
+                </a>
+            </p>
+        </section>
+        <!-- Second part of the content -->
+        <section class="main">
+            <!-- Top part -->
+            <div class="dummytext">
+                <p>This is not a real online service! You know you need something like
+                this in your life to help you realize your deepest dreams. Sign up
+                <em>now</em> to get started.</p>
+                <br>
+                <p>You <em>know</em> you want to.</p>
+            </div>
+            <!-- Middle part -->
+            <form action="http://httpbin.org/post" method="post">
+                <section class="input-form">
+                    <!-- Input header -->
+                    <h2>Let's do this!</h2>
+                    <!-- Input form -->
+                    <div class="inputs">
+                        <div class="fname">
+                            <label for="fname">FIRST NAME</label>
+                            <input type="text" id="fname" name="fname">
+                        </div>
+                        <div class="lname">
+                            <label for="lname">LAST NAME</label>
+                            <input type="text" id="lname" name="lname">
+                        </div>
+                        <div class="email">
+                            <label for="email">EMAIL</label>
+                            <input type="email" id="email" name="email">
+                        </div>
+                        <div class="tel">
+                            <label for="tel">PHONE NUMBER</label>
+                            <input type="tel" id="tel" name="tel" pattern="[1-9]">
+                        </div>
+                        <div class="pwd1">
+                            <label for="pwd1">PASSWORD</label>
+                            <input type="password" id="pwd1" name="pwd1">
+                            <div id="pwd-error" class="error"></div>
+                        </div>
+                        <div class="pwd2">
+                            <label for="pwd2">CONFIRM PASSWORD</label>
+                            <input type="password" id="pwd2" name="pwd2">
+                        </div>
+                    </div>
+                </section>
+                <!-- For mimicking a box-shadow effect -->
+                <div></div>
+                <!-- Button -->
+                <button class="btn" type="submit">Create Account</button>
+            </form>
+            <!-- Bottom part -->
+            <p class="login-text">Already have an account? <a href="#">Log in</a></p>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
